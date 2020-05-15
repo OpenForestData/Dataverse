@@ -34,17 +34,17 @@
         <div class="row">
             <div class="col-lg-4 col-xs-12">
                 <p class="text-muted">
-                    <a href="https://ibs.bialowieza.pl" target="_blank"><img src="/logos/navbar/sm-ibs.jpg" alt="IBS PAN" /></a>
+                    <a href="https://ibs.bialowieza.pl" class="flex-center" target="_blank"><img src="/logos/navbar/sm-ibs.jpg" alt="IBS PAN" /></a>
                 </p>
             </div>
             <div class="col-lg-4 col-xs-12">
                 <p class="text-muted">
-                    <a href="http://www.biaman.pl" target="_blank"><img src="/logos/navbar/sm-biaman.jpg" alt="MSK BIAMAN" /></a>
+                    <a href="http://www.biaman.pl" class="flex-center" target="_blank"><img src="/logos/navbar/sm-biaman.jpg" alt="MSK BIAMAN" /></a>
                 </p>
             </div>
             <div class="col-lg-4 col-xs-12">
                 <p class="text-muted">
-                    <a href="https://zwl.pb.edu.pl" target="_blank"><img src="/logos/navbar/sm-zwl.png" alt="ZWL PB" /></a>
+                    <a href="https://zwl.pb.edu.pl" class="flex-center" target="_blank"><img src="/logos/navbar/sm-zwl.png" alt="ZWL PB" /></a>
                 </p>
             </div>
         </div>
@@ -56,18 +56,18 @@
 <!-- ACTIONS -->
 <div class="row hmpg-action-block">
     <div class="col-sm-6 col-xs-12 flex-column-center">
-        <div class="h3 lite-header"><img class="data-icons" src="/logos/navbar/server-icon.svg" />Dodawanie i wspoldzielenie danych</div>
+        <div class="h3 lite-header"><img class="data-icons" src="/logos/navbar/server-icon.svg" />Dodawanie i współdzielenie danych</div>
         <!-- <div class="h4 lite-header">Dodawanie i współdzielenie danych</div> -->
         <!-- <p class="text-muted margin-bottom">Podlaskie cyfrowe repozytorium przyrodniczych danych naukowych</p> -->
 
         <p class="margin-bottom-half">
             <!-- <span id="headAllTimeAllDatasetsValue" class="h4 lite-header"></span> <span class="text-muted">zbiorów -->
-            <span id="headAllTimeAllDatasetsValue" class="h4 lite-header"></span> <span class="text-muted">zbiorow
+            <span id="headAllTimeAllDatasetsValue" class="h4 lite-header"></span> <span class="text-muted">zbiorów
                 danych</span> &nbsp;&nbsp;
             <!-- <span id="headAllTimeAllDownloadsValue" class="h4 lite-header"></span> <span class="text-muted">łącznych
                 pobrań</span> -->
-            <span id="headAllTimeAllDownloadsValue" class="h4 lite-header"></span> <span class="text-muted">lacznych
-                pobran</span>
+            <span id="headAllTimeAllDownloadsValue" class="h4 lite-header"></span> <span class="text-muted">łącznych
+            pobrań</span>
         </p>
 
         <a class="btn btn-default btn-harvard margin-top margin-bottom main-button" href="/dataset.xhtml?ownerId=1">
@@ -75,12 +75,12 @@
         </a>
     </div>
     <div class="col-sm-6 col-xs-12 flex-column-center">
-        <div class="h3 lite-header"><img class="data-icons" src="/logos/navbar/data-icon.svg" />Organizacja dane w repozytorium
+        <div class="h3 lite-header"><img class="data-icons" src="/logos/navbar/data-icon.svg" />Organizacja danych w repozytorium
         </div>
         <!-- <p class="text-muted margin-bottom">Kontener dla zbiorów danych, plików i metadanych</p> -->
 
         <p class="margin-bottom-half">
-            <span id="headAllTimeAllDataversesValue" class="h4 lite-header"></span> <span class="text-muted">katalogow</span>
+            <span id="headAllTimeAllDataversesValue" class="h4 lite-header"></span> <span class="text-muted">katalogów</span>
             <!-- <span id="headAllTimeAllDataversesValue" class="h4 lite-header"></span> <span class="text-muted">katalogów</span> -->
         </p>
 
@@ -266,7 +266,7 @@
                 resultHtml += "<div class=\"col-xs-12 hmpg-recent-metadata\"><p><a href=\"/dataset.xhtml?persistentId=" + item.global_id + "\">" + item.name + "</a></p><p class=\"small text-muted\"><a href=\"/dataverse/" + item.identifier_of_dataverse + "\" class=\"highlightBold\">" + item.name_of_dataverse + "</a> " + date + "</p></div>";
                 resultHtml += "</div>";
             });
-            document.getElementById(elm).innerHTML = resultHtml;
+            // document.getElementById(elm).innerHTML = resultHtml;
         });
     }
 
@@ -277,10 +277,10 @@
             var resultCount = jData.data.count;
             if (Array.isArray(elm)) {
                 elm.forEach(function(e) {
-                    document.getElementById(e).innerHTML = resultCount.toLocaleString('en');
+                    // document.getElementById(e).innerHTML = resultCount.toLocaleString('en');
                 });
             } else {
-                document.getElementById(elm).innerHTML = resultCount.toLocaleString('en');
+                // document.getElementById(elm).innerHTML = resultCount.toLocaleString('en');
             }
         });
     }
@@ -296,6 +296,8 @@
         });
     }
 
+
+    /* Its working properly*/
     function querySubjectDataverseDataset(elm) {
         var dvArray = [];
         var fullArray = [];
