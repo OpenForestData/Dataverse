@@ -130,7 +130,8 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </p> -->
                 <a class="btn btn-default btn-harvard margin-top margin-bottom main-button all-datasets-button" href="/dataverse/root">
-                    Wszystkie dane <img class="plus-icon" src="/logos/navbar/plus-green.svg">
+                    Wszystkie dane 
+                    <!-- <img class="plus-icon" src="/logos/navbar/plus-green.svg"> -->
                 </a>
             </div>
         </div>
@@ -266,7 +267,7 @@
                 resultHtml += "<div class=\"col-xs-12 hmpg-recent-metadata\"><p><a href=\"/dataset.xhtml?persistentId=" + item.global_id + "\">" + item.name + "</a></p><p class=\"small text-muted\"><a href=\"/dataverse/" + item.identifier_of_dataverse + "\" class=\"highlightBold\">" + item.name_of_dataverse + "</a> " + date + "</p></div>";
                 resultHtml += "</div>";
             });
-            // document.getElementById(elm).innerHTML = resultHtml;
+            document.getElementById(elm).innerHTML = resultHtml;
         });
     }
 
@@ -277,10 +278,10 @@
             var resultCount = jData.data.count;
             if (Array.isArray(elm)) {
                 elm.forEach(function(e) {
-                    // document.getElementById(e).innerHTML = resultCount.toLocaleString('en');
+                    document.getElementById(e).innerHTML = resultCount.toLocaleString('en');
                 });
             } else {
-                // document.getElementById(elm).innerHTML = resultCount.toLocaleString('en');
+                document.getElementById(elm).innerHTML = resultCount.toLocaleString('en');
             }
         });
     }

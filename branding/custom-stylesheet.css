@@ -1,603 +1,821 @@
-        #dataverse-header-block {
-            padding-top: 0px;
-        }
-        
-        #dataverseHeader {
-            display: none;
-        }
-        
-        .ui-widget {
-            font-family: 'Prompt', 'sans-serif';
-        }
-        
-        #custom-header {
-            background: #F6F4F2;
-            min-height: 50px;
-            position: absolute;
-            right: 0;
-            left: 0;
-            z-index: 930;
-            padding-top: 8px;
-            top: 50px;
-        }
-        
-        .header-container {
-            min-height: 50px;
-            width: 100%;
-        }
-        
-        .header-text {
-            display: flex;
-            justify-content: center;
-            padding-top: 15px;
-            font-size: 24px;
-            color: #000000;
-            min-height: 50px;
-        }
-        
-        .search-text {
-            font-size: 17px;
-            display: flex;
-            justify-content: center;
-            padding-top: 15px;
-            color: #000000;
-        }
-        
-        .owners {
-            padding-top: 200px;
-        }
-        
-        .input-search {
-            width: 30%;
-            border-radius: 50px;
-            border: 1px solid #019544;
-            text-indent: 25px;
-        }
-        
-        .search-main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: 10px;
-        }
-        
-        .input-search-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
-        
-        .row-search {
-            background: #F6F4F2;
-            width: 100%;
-            left: 0;
-            right: 0;
-            position: absolute;
-            padding-bottom: 65px;
-        }
-        
-        .search-icon {
-            position: relative;
-            top: 7px;
-            left: -29.5%;
-        }
-        
-        .data-icons {
-            padding-right: 15px;
-            padding-bottom: 1px;
-        }
-        
-        .btn-harvard {
-            color: white;
-            background: #019544;
-            font-weight: normal;
-            border-radius: 50px;
-        }
-        
-        .btn-harvard:hover,
-        .btn-harvard:focus,
-        .btn-harvard:active,
-        .btn-harvard.active,
-        .open .dropdown-toggle.btn-harvard {
-            color: white;
-            background: #019544;
-            font-weight: normal;
-        }
-        
-        .btn-harvard span.glyphicon {
-            margin-right: 0;
-        }
-        
-        .flex-column-center {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .flex-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .btn-default {
-            text-shadow: none;
-        }
-        
-        #login-container {
-            padding-top: 50px;
-        }
-        
-        div.hmpg-action-block {
-            padding-top: 4em;
-            padding-bottom: 2em;
-        }
-        
-        @media (min-width: 768px) {
-            #dataversesBySubject {
-                display: grid;
-                grid-auto-flow: column;
-                -webkit-column-count: 4;
-                -moz-column-count: 4;
-                column-count: 4;
-                overflow: hidden;
-                -webkit-column-break-inside: avoid;
-                page-break-inside: avoid;
-                break-inside: avoid;
-                break-inside: avoid-column;
-                padding-top: 15px;
-            }
-            #journals {
-                -webkit-column-count: 1;
-                -moz-column-count: 1;
-                column-count: 1;
-                overflow: hidden;
-            }
-            #researchers {
-                -webkit-column-count: 2;
-                -moz-column-count: 2;
-                column-count: 2;
-                overflow: hidden;
-            }
-            #journals div.hmpg-recent-block,
-            #researchers div.hmpg-recent-block {
-                -webkit-column-break-inside: avoid;
-                page-break-inside: avoid;
-                break-inside: avoid;
-                break-inside: avoid-column;
-            }
-        }
-        
-        #browseBySubject p.browse-subjects {
-            display: inline-block;
-            width: 100%;
-            font-size: 14px;
-            /* padding: 0 2px; */
-        }
-        
-        #browseBySubject p.browse-subjects a {
-            color: black;
-        }
-        
-        #browseBySubject p.browse-subjects a:focus,
-        #browseBySubject p.browse-subjects a:hover {
-            color: black;
-        }
-        
-        .twenty-percent {
-            width: 20%;
-        }
-        
-        .main-button {
-            width: 200px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-        }
-        
-        .plus-icon {
-            padding-left: 15px;
-        }
-        
-        .all-datasets-button {
-            color: #019544;
-            background-color: white;
-            border: 1px solid #019544;
-        }
-        
-        .all-datasets-button:hover {
-            background-color: darkgrey;
-        }
-        
-        #custom-footer {
-            position: relative;
-            color: black;
-            background: #F6F4F2;
-            padding: 4em 0em;
-            border-top: 9px solid #019544;
-        }
-        
-        #custom-footer::after {
-            position: absolute;
-            background-image: url('/logos/navbar/forest-footer.svg');
-            background-repeat: no-repeat;
-            content: "";
-            transform: scale(0.6);
-            height: 182px;
-            width: 210px;
-            top: -150px;
-            z-index: 20;
-            left: -45px;
-        }
-        
-        #footer {
-            display: none;
-        }
-        
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .logo-padding {
-            padding-left: 50px;
-            padding: 0 30px;
-        }
-        
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .footer-right {
-            width: 60%;
-        }
-        
-        .footer-left {
-            width: 40%;
-        }
-        
-        .footer-left {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .image-redirects {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            padding-bottom: 25px;
-        }
-        
-        .image-redirects a image {
-            max-height: 45px;
-        }
-        
-        .footer-sponsor {
-            padding-left: 10%;
-            padding-bottom: 20px;
-        }
-        /* Dataverse ROOT CSS  */
-        
-        #dataverseDesc {
-            display: none;
-        }
-        
-        #content {
-            padding-top: 75px;
-            min-height: 65em;
-        }
-        
-        #actionButtonBlock {
-            margin-top: 3em;
-            margin-bottom: -1em;
-        }
-        
-        #actionButtonBlock .row .padding-none {
-            display: none;
-        }
-        
-        #metrics-label {
-            display: none;
-        }
-        
-        .metrics-downloads {
-            float: left;
-            font-size: 14px;
-            padding-left: 25px;
-        }
-        
-        .metrics-downloads::before {
-            position: absolute;
-            content: '';
-            background-image: url('/logos/datasets/downloads-icon.svg');
-            background-repeat: no-repeat;
-            width: 17px;
-            height: 17px;
-            left: 5px;
-        }
-        
-        #metrics-block {
-            border: 0;
-        }
-        
-        .ui-icon-check {
-            color: green
-        }
-        
-        #search-row-panel {
-            border: 1px solid #F6F4F2;
-            border-radius: 0px;
-            padding: 20px 0;
-        }
-        
-        #table.ui-panelgrid.facetsMoreLess td:last-child {
-            text-align: left;
-        }
-        
-        .card-preview-icon-block {
-            display: none;
-        }
-        
-        [id$='resultsTable'] .resultDatasetCitationBlock {
-            margin: 0px;
-            font-weight: bold;
-            background-color: #F6F4F2;
-            border: 0px;
-            margin: 1px 0 1px 0;
-        }
-        
-        div.panelSearchForm input.search-input {
-            border-radius: 50px;
-            border: 1px solid #019544;
-            text-indent: 10px;
-            margin-right: -2em;
-            padding: 4px;
-        }
-        
-        div.panelSearchForm a.btn-default {
-            border-radius: 50px;
-            max-height: 30px;
-            border: 0px solid black;
-            background: transparent;
-            color: transparent;
-            width: 0px;
-            padding: 0 0 0 0;
-        }
-        
-        div.panelSearchForm a.btn-default:hover {
-            border-radius: 50px;
-            max-height: 30px;
-            border: 0px solid black;
-            background: transparent;
-            color: transparent;
-            width: 0px;
-            padding: 0px;
-            padding: 0 0 0 0;
-        }
-        
-        div.panelSearchFrom div.col-manage-action div.button-block button.btn {
-            border-radius: 50px;
-            background-color: #019544;
-            color: white;
-        }
-        
-        a,
-        a:hover,
-        a:focus,
-        a:active,
-        .ui-widget-content a,
-        .ui-widget-content a:hover,
-        .ui-widget-content a:focus {
-            color: #2A2B2C;
-        }
-        
-        .btn span.glyphicon::before {
-            color: white;
-        }
-        
-        a[id$='advsearchlink'] {
-            margin-left: 5em;
-        }
-        
-        #addDataForm .btn-group .btn {
-            border-radius: 50px;
-            background-color: #019544;
-            color: white;
-        }
-        
-        .results-sort-pagination .btn-group .btn {
-            border-radius: 50px;
-            background-color: white;
-            color: black;
-            background-image: none;
-            min-width: 14em;
-        }
-        
-        div.results-sort-pagination div.btn-group button.btn span.glyphicon-sort::before {
-            content: '';
-        }
-        
-        table[id$='resultsTable'] td>div.datasetResult {
-            border-color: #F6F4F2;
-        }
-        
-        [id$='resultsTable'] div[class*='Result']>div.card-title-icon-block,
-        [id$='resultsTable'] div[class*='Result']>div.card-preview-icon-block,
-        [id$='resultsTable'] div[class*='Result']>div.file-tags-block {
-            font-size: 110%;
-            color: #019544;
-        }
-        
-        .pagination>.active>a,
-        .pagination>.active>a:focus,
-        .pagination>.active>a:hover,
-        .pagination>.active>span,
-        .pagination>.active>span:focus,
-        .pagination>.active>span:hover {
-            z-index: 3;
-            color: #019544;
-            cursor: default;
-            background-color: #F6F4F2;
-            border-color: #337ab7;
-        }
-        
-        .pagination>li>a,
-        .pagination>li>span {
-            position: relative;
-            float: left;
-            padding: 6px 12px;
-            margin-left: -1px;
-            line-height: 1.42857143;
-            color: #000000;
-            text-decoration: none;
-            background-color: #fff;
-            border: 0px solid #ddd;
-        }
-        
-        .pagination>li:last-child>a,
-        .pagination>li:last-child>span {
-            color: #019544;
-        }
-        
-        .pagination>li:first-child>a,
-        .pagination>li:first-child>span {
-            color: #019544;
-        }
-        
-        .form-control:focus {
-            border: 1px solid #019544;
-            box-shadow: none;
-            -webkit-box-shadow: none;
-        }
-        
-        table[id$='resultsTable'] td>div.dataverseResult {
-            border-color: #F6F4F2;
-        }
-        
-        #resultsFacetsTopBlock a.facetLink.facetSelected {
-            background-color: #F6F4F2;
-        }
-        
-        .col-manage-action .button-block button {
-            border-radius: 50px;
-            background-color: #019544 !important;
-            color: white;
-            width: 14em;
-        }
-        
-        .col-manage-action .button-block button:hover {
-            border-radius: 50px;
-            background-color: #019544 !important;
-            color: white;
-            width: 14em;
-        }
-        
-        .ui-state-active .ui-icon {
-            background-image: url('/logos/datasets/checkbox-active.svg');
-            border: 1px solid #019544;
-        }
-        
-        .ui-icon-check {
-            background-position: -3px;
-        }
-        
-        .ui-state-hover,
-        .ui-widget-content .ui-state-hover,
-        .ui-widget-header .ui-state-hover,
-        .ui-state-active,
-        .ui-widget-content .ui-state-active,
-        .ui-widget-header .ui-state-active,
-        .ui-state-disabled,
-        .ui-widget-content .ui-state-disabled,
-        .ui-widget-header .ui-state-disabled {
-            background-color: white;
-        }
-        
-        .lite-header {
-            font-weight: normal;
-            margin-bottom: 30px;
-        }
-        
-        a.facetLink.facetSelected span.glyphicon-remove {
-            margin-top: 3px;
-        }
-        
-        .bg-citation {
-            background: #F6F4F2;
-            border: 0;
-        }
-        
-        div.panel-heading.text-info[data-toggle="collapse"] {
-            color: black;
-        }
-        
-        .nav>li>a::after {
-            content: '|';
-            position: relative;
-            top: 1px;
-            left: 15px;
-        }
-        
-        #navbarFixed form.navbar-form-link a::after {
-            content: '|';
-            position: relative;
-            top: 1px;
-            left: 15px;
-        }
-        
-        .results-sort-pagination {
-            padding-top: 20px;
-        }
-        
-        #resultsCountPaginatorBlock div.results-sort-pagination {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding-bottom: 15px;
-        }
-        /* OLD CSS CLASSES */
-        
-        .heavy-rule {
-            border: 1px solid #DDD;
-        }
-        
-        .spacer-rule {
-            border: 0;
-            margin-top: 0;
-        }
-        
-        .activity-rule {
-            width: 85%;
-            margin-left: 30px;
-        }
-        
-        div.search-widget {
-            padding-bottom: 2em;
-        }
-        
-        div.hmpg-recent-col p.placeholder {
-            display: inline-block;
-        }
-        
-        div.hmpg-recent-col div.hmpg-recent-block {
-            border-bottom: 1px solid #DDD;
-            margin-bottom: 12px;
-        }
-        /* NOTE: REMOVED THUMBNAILS
+                                                    #dataverse-header-block {
+                                                        padding-top: 0px;
+                                                    }
+                                                    
+                                                    #dataverseHeader {
+                                                        display: none;
+                                                    }
+                                                    
+                                                    .ui-widget {
+                                                        font-family: 'Prompt', 'sans-serif';
+                                                    }
+                                                    
+                                                    #custom-header {
+                                                        background: #F6F4F2;
+                                                        min-height: 50px;
+                                                        position: absolute;
+                                                        right: 0;
+                                                        left: 0;
+                                                        z-index: 930;
+                                                        padding-top: 8px;
+                                                        top: 50px;
+                                                    }
+                                                    
+                                                    .header-container {
+                                                        min-height: 50px;
+                                                        width: 100%;
+                                                    }
+                                                    
+                                                    .header-text {
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        padding-top: 15px;
+                                                        font-size: 24px;
+                                                        color: #000000;
+                                                        min-height: 50px;
+                                                    }
+                                                    
+                                                    .search-text {
+                                                        font-size: 17px;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        padding-top: 15px;
+                                                        color: #000000;
+                                                    }
+                                                    
+                                                    .owners {
+                                                        padding-top: 200px;
+                                                    }
+                                                    
+                                                    .input-search {
+                                                        width: 30%;
+                                                        border-radius: 50px;
+                                                        border: 1px solid #019544;
+                                                        text-indent: 25px;
+                                                    }
+                                                    
+                                                    .search-main {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        padding-top: 10px;
+                                                    }
+                                                    
+                                                    .input-search-container {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        padding-top: 20px;
+                                                    }
+                                                    
+                                                    .row-search {
+                                                        background: #F6F4F2;
+                                                        width: 100%;
+                                                        left: 0;
+                                                        right: 0;
+                                                        position: absolute;
+                                                        padding-bottom: 65px;
+                                                    }
+                                                    
+                                                    .search-icon {
+                                                        position: relative;
+                                                        top: 7px;
+                                                        left: -29.5%;
+                                                    }
+                                                    
+                                                    .data-icons {
+                                                        padding-right: 15px;
+                                                        padding-bottom: 1px;
+                                                    }
+                                                    
+                                                    .btn-harvard {
+                                                        color: white;
+                                                        background: #019544;
+                                                        font-weight: normal;
+                                                        border-radius: 50px;
+                                                    }
+                                                    
+                                                    .btn-harvard:hover,
+                                                    .btn-harvard:focus,
+                                                    .btn-harvard:active,
+                                                    .btn-harvard.active,
+                                                    .open .dropdown-toggle.btn-harvard {
+                                                        color: white;
+                                                        background: #019544;
+                                                        font-weight: normal;
+                                                    }
+                                                    
+                                                    .btn-harvard span.glyphicon {
+                                                        margin-right: 0;
+                                                    }
+                                                    
+                                                    .flex-column-center {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                    }
+                                                    
+                                                    .flex-center {
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                    }
+                                                    
+                                                    .btn-default {
+                                                        text-shadow: none;
+                                                    }
+                                                    
+                                                    #login-container {
+                                                        padding-top: 50px;
+                                                    }
+                                                    
+                                                    div.hmpg-action-block {
+                                                        padding-top: 4em;
+                                                        padding-bottom: 2em;
+                                                    }
+                                                    
+                                                    @media (min-width: 768px) {
+                                                        #dataversesBySubject {
+                                                            display: grid;
+                                                            grid-auto-flow: column;
+                                                            -webkit-column-count: 4;
+                                                            -moz-column-count: 4;
+                                                            column-count: 4;
+                                                            overflow: hidden;
+                                                            -webkit-column-break-inside: avoid;
+                                                            page-break-inside: avoid;
+                                                            break-inside: avoid;
+                                                            break-inside: avoid-column;
+                                                            padding-top: 15px;
+                                                        }
+                                                        #journals {
+                                                            -webkit-column-count: 1;
+                                                            -moz-column-count: 1;
+                                                            column-count: 1;
+                                                            overflow: hidden;
+                                                        }
+                                                        #researchers {
+                                                            -webkit-column-count: 2;
+                                                            -moz-column-count: 2;
+                                                            column-count: 2;
+                                                            overflow: hidden;
+                                                        }
+                                                        #journals div.hmpg-recent-block,
+                                                        #researchers div.hmpg-recent-block {
+                                                            -webkit-column-break-inside: avoid;
+                                                            page-break-inside: avoid;
+                                                            break-inside: avoid;
+                                                            break-inside: avoid-column;
+                                                        }
+                                                    }
+                                                    
+                                                    #browseBySubject p.browse-subjects {
+                                                        display: inline-block;
+                                                        width: 100%;
+                                                        font-size: 14px;
+                                                        /* padding: 0 2px; */
+                                                    }
+                                                    
+                                                    #browseBySubject p.browse-subjects a {
+                                                        color: black;
+                                                    }
+                                                    
+                                                    #browseBySubject p.browse-subjects a:focus,
+                                                    #browseBySubject p.browse-subjects a:hover {
+                                                        color: black;
+                                                    }
+                                                    
+                                                    .twenty-percent {
+                                                        width: 20%;
+                                                    }
+                                                    
+                                                    .main-button {
+                                                        width: 200px;
+                                                        height: 50px;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        font-size: 18px;
+                                                    }
+                                                    
+                                                    .plus-icon {
+                                                        padding-left: 15px;
+                                                    }
+                                                    
+                                                    .all-datasets-button {
+                                                        color: #019544;
+                                                        background-color: white;
+                                                        border: 1px solid #019544;
+                                                    }
+                                                    
+                                                    .all-datasets-button:hover {
+                                                        background-color: #019544;
+                                                    }
+                                                    
+                                                    .all-datasets-button::after {
+                                                        content: '';
+                                                        background-image: url(/logos/navbar/plus-green.svg);
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        position: relative;
+                                                        left: 7px;
+                                                        top: 8px;
+                                                        background-repeat: no-repeat;
+                                                    }
+                                                    
+                                                    .all-datasets-button:hover::after {
+                                                        content: '';
+                                                        background-image: url('/logos/elements/plus_white.png');
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        position: relative;
+                                                        left: 0px;
+                                                        top: 0px;
+                                                    }
+                                                    
+                                                    #custom-footer {
+                                                        position: relative;
+                                                        color: black;
+                                                        background: #F6F4F2;
+                                                        padding: 4em 0em;
+                                                        border-top: 9px solid #019544;
+                                                    }
+                                                    
+                                                    #custom-footer::after {
+                                                        position: absolute;
+                                                        background-image: url('/logos/navbar/forest-footer.svg');
+                                                        background-repeat: no-repeat;
+                                                        content: "";
+                                                        transform: scale(0.6);
+                                                        height: 182px;
+                                                        width: 210px;
+                                                        top: -150px;
+                                                        z-index: 20;
+                                                        left: -45px;
+                                                    }
+                                                    
+                                                    #footer {
+                                                        display: none;
+                                                    }
+                                                    
+                                                    .footer-container {
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                    }
+                                                    
+                                                    .logo-padding {
+                                                        padding-left: 50px;
+                                                        padding: 0 30px;
+                                                    }
+                                                    
+                                                    .footer-links {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                    }
+                                                    
+                                                    .footer-right {
+                                                        width: 60%;
+                                                    }
+                                                    
+                                                    .footer-left {
+                                                        width: 40%;
+                                                    }
+                                                    
+                                                    .footer-left {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: space-between;
+                                                    }
+                                                    
+                                                    .image-redirects {
+                                                        display: flex;
+                                                        flex-direction: row;
+                                                        justify-content: flex-end;
+                                                        padding-bottom: 25px;
+                                                    }
+                                                    
+                                                    .image-redirects a image {
+                                                        max-height: 45px;
+                                                    }
+                                                    
+                                                    .footer-sponsor {
+                                                        padding-left: 10%;
+                                                        padding-bottom: 20px;
+                                                    }
+                                                    /* Dataverse ROOT CSS  */
+                                                    
+                                                    #dataverseDesc {
+                                                        display: none;
+                                                    }
+                                                    
+                                                    #content {
+                                                        padding-top: 75px;
+                                                        min-height: 65em;
+                                                    }
+                                                    
+                                                    #actionButtonBlock {
+                                                        margin-top: 3em;
+                                                        margin-bottom: -1em;
+                                                    }
+                                                    
+                                                    #metrics-label {
+                                                        display: none;
+                                                    }
+                                                    
+                                                    .metrics-downloads {
+                                                        float: left;
+                                                        font-size: 14px;
+                                                        padding-left: 25px;
+                                                    }
+                                                    
+                                                    .metrics-downloads::before {
+                                                        position: absolute;
+                                                        content: '';
+                                                        background-image: url('/logos/datasets/downloads-icon.svg');
+                                                        background-repeat: no-repeat;
+                                                        width: 17px;
+                                                        height: 17px;
+                                                        left: 5px;
+                                                    }
+                                                    
+                                                    #metrics-block {
+                                                        border: 0;
+                                                    }
+                                                    
+                                                    .ui-icon-check {
+                                                        color: green
+                                                    }
+                                                    
+                                                    #search-row-panel {
+                                                        border: 1px solid #F6F4F2;
+                                                        border-radius: 0px;
+                                                        padding: 20px 0;
+                                                    }
+                                                    
+                                                    #table.ui-panelgrid.facetsMoreLess td:last-child {
+                                                        text-align: left;
+                                                    }
+                                                    
+                                                    .card-preview-icon-block {
+                                                        display: none;
+                                                    }
+                                                    
+                                                    [id$='resultsTable'] .resultDatasetCitationBlock {
+                                                        margin: 0px;
+                                                        font-weight: bold;
+                                                        background-color: #F6F4F2;
+                                                        border: 0px;
+                                                        margin: 1px 0 1px 0;
+                                                    }
+                                                    
+                                                    div.panelSearchForm input.search-input {
+                                                        border-radius: 50px;
+                                                        border: 1px solid #019544;
+                                                        text-indent: 10px;
+                                                        margin-right: -2em;
+                                                        padding: 4px;
+                                                    }
+                                                    
+                                                    div.panelSearchForm a.btn-default {
+                                                        border-radius: 50px;
+                                                        max-height: 30px;
+                                                        border: 0px solid black;
+                                                        background: transparent;
+                                                        color: transparent;
+                                                        width: 0px;
+                                                        padding: 0 0 0 0;
+                                                    }
+                                                    
+                                                    div.panelSearchForm a.btn-default:hover {
+                                                        border-radius: 50px;
+                                                        max-height: 30px;
+                                                        border: 0px solid black;
+                                                        background: transparent;
+                                                        color: transparent;
+                                                        width: 0px;
+                                                        padding: 0px;
+                                                        padding: 0 0 0 0;
+                                                    }
+                                                    
+                                                    div.panelSearchFrom div.col-manage-action div.button-block button.btn {
+                                                        border-radius: 50px;
+                                                        background-color: #019544;
+                                                        color: white;
+                                                    }
+                                                    
+                                                    a,
+                                                    a:hover,
+                                                    a:focus,
+                                                    a:active,
+                                                    .ui-widget-content a,
+                                                    .ui-widget-content a:hover,
+                                                    .ui-widget-content a:focus {
+                                                        color: #2A2B2C;
+                                                    }
+                                                    
+                                                    .btn span.glyphicon::before {
+                                                        color: black;
+                                                    }
+                                                    
+                                                    a[id$='advsearchlink'] {
+                                                        margin-left: 5em;
+                                                    }
+                                                    
+                                                    #addDataForm .btn-group .btn {
+                                                        border-radius: 50px;
+                                                        background-color: #019544;
+                                                        color: white;
+                                                    }
+                                                    
+                                                    .results-sort-pagination .btn-group .btn {
+                                                        border-radius: 50px;
+                                                        background-color: white;
+                                                        color: black;
+                                                        background-image: none;
+                                                        min-width: 14em;
+                                                    }
+                                                    
+                                                    div.results-sort-pagination div.btn-group button.btn span.glyphicon-sort::before {
+                                                        content: '';
+                                                    }
+                                                    
+                                                    table[id$='resultsTable'] td>div.datasetResult {
+                                                        border-color: #F6F4F2;
+                                                    }
+                                                    
+                                                    [id$='resultsTable'] div[class*='Result']>div.card-title-icon-block,
+                                                    [id$='resultsTable'] div[class*='Result']>div.card-preview-icon-block,
+                                                    [id$='resultsTable'] div[class*='Result']>div.file-tags-block {
+                                                        font-size: 110%;
+                                                        color: #019544;
+                                                    }
+                                                    
+                                                    .pagination>.active>a,
+                                                    .pagination>.active>a:focus,
+                                                    .pagination>.active>a:hover,
+                                                    .pagination>.active>span,
+                                                    .pagination>.active>span:focus,
+                                                    .pagination>.active>span:hover {
+                                                        z-index: 3;
+                                                        color: #019544;
+                                                        cursor: default;
+                                                        background-color: #F6F4F2;
+                                                        border-color: #337ab7;
+                                                    }
+                                                    
+                                                    .pagination>li>a,
+                                                    .pagination>li>span {
+                                                        position: relative;
+                                                        float: left;
+                                                        padding: 6px 12px;
+                                                        margin-left: -1px;
+                                                        line-height: 1.42857143;
+                                                        color: #000000;
+                                                        text-decoration: none;
+                                                        background-color: #fff;
+                                                        border: 0px solid #ddd;
+                                                    }
+                                                    
+                                                    .pagination>li:last-child>a,
+                                                    .pagination>li:last-child>span {
+                                                        color: #019544;
+                                                    }
+                                                    
+                                                    .pagination>li:first-child>a,
+                                                    .pagination>li:first-child>span {
+                                                        color: #019544;
+                                                    }
+                                                    
+                                                    .form-control:focus {
+                                                        border: 1px solid #019544;
+                                                        box-shadow: none;
+                                                        -webkit-box-shadow: none;
+                                                    }
+                                                    
+                                                    table[id$='resultsTable'] td>div.dataverseResult {
+                                                        border-color: #F6F4F2;
+                                                    }
+                                                    
+                                                    #resultsFacetsTopBlock a.facetLink.facetSelected {
+                                                        background-color: #F6F4F2;
+                                                    }
+                                                    
+                                                    .col-manage-action .button-block button {
+                                                        border-radius: 50px;
+                                                        background-color: #019544 !important;
+                                                        color: white;
+                                                        width: 14em;
+                                                    }
+                                                    
+                                                    .col-manage-action .button-block button:hover {
+                                                        border-radius: 50px;
+                                                        background-color: #019544 !important;
+                                                        color: white;
+                                                        width: 14em;
+                                                    }
+                                                    
+                                                    .ui-state-active .ui-icon {
+                                                        background-image: url('/logos/datasets/checkbox-active.svg');
+                                                        border: 1px solid #019544;
+                                                    }
+                                                    
+                                                    .ui-icon-check {
+                                                        background-position: -3px;
+                                                    }
+                                                    
+                                                    .ui-state-hover,
+                                                    .ui-widget-content .ui-state-hover,
+                                                    .ui-widget-header .ui-state-hover,
+                                                    .ui-state-active,
+                                                    .ui-widget-content .ui-state-active,
+                                                    .ui-widget-header .ui-state-active,
+                                                    .ui-state-disabled,
+                                                    .ui-widget-content .ui-state-disabled,
+                                                    .ui-widget-header .ui-state-disabled {
+                                                        background-color: white;
+                                                    }
+                                                    
+                                                    .lite-header {
+                                                        font-weight: normal;
+                                                        margin-bottom: 30px;
+                                                    }
+                                                    
+                                                    a.facetLink.facetSelected span.glyphicon-remove {
+                                                        margin-top: 3px;
+                                                    }
+                                                    
+                                                    .bg-citation {
+                                                        background: #F6F4F2;
+                                                        border: 0;
+                                                    }
+                                                    
+                                                    div.panel-heading.text-info[data-toggle="collapse"] {
+                                                        color: black;
+                                                    }
+                                                    
+                                                    .nav>li>a::after {
+                                                        content: '|';
+                                                        position: relative;
+                                                        top: 1px;
+                                                        left: 15px;
+                                                    }
+                                                    
+                                                    #navbarFixed form.navbar-form-link a::after {
+                                                        content: '|';
+                                                        position: relative;
+                                                        top: 1px;
+                                                        left: 15px;
+                                                    }
+                                                    
+                                                    .results-sort-pagination {
+                                                        padding-top: 20px;
+                                                    }
+                                                    
+                                                    #resultsCountPaginatorBlock div.results-sort-pagination {
+                                                        display: flex;
+                                                        justify-content: flex-end;
+                                                        align-items: center;
+                                                        padding-bottom: 15px;
+                                                    }
+                                                    
+                                                    .icon-dataset:before {
+                                                        content: '';
+                                                        background-image: url(/logos/datasets/dataset.svg);
+                                                        width: 16px;
+                                                        height: 20px;
+                                                        transform: scaleY(0.9);
+                                                    }
+                                                    
+                                                    .btn-group .dropdown-toggle:active,
+                                                    .btn-group.open .dropdown-toggle {
+                                                        color: white;
+                                                        background-color: #019544;
+                                                    }
+                                                    
+                                                    [data-icon]:before,
+                                                    .icon-dataset:before {
+                                                        position: relative;
+                                                        top: 2px;
+                                                    }
+                                                    
+                                                    .btn-default.active.focus,
+                                                    .btn-default.active:focus,
+                                                    .btn-default.active:hover,
+                                                    .btn-default:active.focus,
+                                                    .btn-default:active:focus,
+                                                    .btn-default:active:hover,
+                                                    .open>.dropdown-toggle.btn-default.focus,
+                                                    .open>.dropdown-toggle.btn-default:focus,
+                                                    .open>.dropdown-toggle.btn-default:hover {
+                                                        color: white;
+                                                        background-color: #019544;
+                                                        border-color: #019544;
+                                                    }
+                                                    /* RESPONSIVE VIEW CONFIG */
+                                                    /* @media (max-device-width: 480px) and (orientation: landscape) {} */
+                                                    
+                                                    @media (max-width: 767px) {
+                                                        #custom-footer::after {
+                                                            visibility: hidden;
+                                                        }
+                                                        .row {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            margin-top: 10px;
+                                                        }
+                                                        .header-text {
+                                                            font-size: 16px;
+                                                            text-align: center;
+                                                            padding-top: 25px;
+                                                        }
+                                                        .input-search {
+                                                            width: 100%;
+                                                            text-align: center;
+                                                            padding-top: 20px;
+                                                        }
+                                                        .search-icon {
+                                                            display: none;
+                                                        }
+                                                        .nav>li>a::after {
+                                                            display: none;
+                                                        }
+                                                        .footer-container {
+                                                            flex-direction: column;
+                                                        }
+                                                        .footer-single-image {
+                                                            padding-bottom: 20px;
+                                                        }
+                                                        .search-text {
+                                                            font-size: 16px;
+                                                            text-align: center;
+                                                            padding-top: 35px;
+                                                        }
+                                                        .image-redirects {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            padding-bottom: 0px;
+                                                        }
+                                                        .footer-right {
+                                                            width: 100%;
+                                                        }
+                                                        .logo-padding {
+                                                            padding-left: 0px;
+                                                            padding: 0;
+                                                        }
+                                                        .footer-sponsor {
+                                                            padding-left: 0;
+                                                            padding-bottom: 0;
+                                                        }
+                                                        .row-search {
+                                                            padding-bottom: 45px;
+                                                        }
+                                                        div.hmpg-action-block {
+                                                            padding-top: 0em;
+                                                        }
+                                                        .footer-eu-image {
+                                                            width: 100%;
+                                                            height: 25px;
+                                                        }
+                                                        div.panelSearchForm input.search-input {
+                                                            width: 100%;
+                                                        }
+                                                        .metrics-downloads::before {
+                                                            top: 20px;
+                                                        }
+                                                        #resultsCountPaginatorBlock div.results-sort-pagination {
+                                                            justify-content: flex-start;
+                                                        }
+                                                        a[id$='advsearchlink'] {
+                                                            margin-left: 1em;
+                                                        }
+                                                        .padding-none {
+                                                            text-align: left;
+                                                            padding-bottom: 10px;
+                                                        }
+                                                        #metrics-block {
+                                                            display: none;
+                                                        }
+                                                        #navbarFixed form.navbar-form-link a::after {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    
+                                                    @media (min-width: 768px) {
+                                                        .row {
+                                                            display: flex;
+                                                        }
+                                                        #custom-footer::after {
+                                                            visibility: hidden;
+                                                        }
+                                                        .header-text {
+                                                            font-size: 20px;
+                                                        }
+                                                        .nav>li>a::after {
+                                                            display: none;
+                                                        }
+                                                        #navbarFixed form.navbar-form-link a::after {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    
+                                                    @media (min-width: 992px) {
+                                                        .row {
+                                                            display: flex;
+                                                        }
+                                                        #custom-footer::after {
+                                                            visibility: hidden;
+                                                        }
+                                                        .header-text {
+                                                            font-size: 24px;
+                                                        }
+                                                        #navbarFixed form.navbar-form-link a::after {
+                                                            display: none;
+                                                        }
+                                                        .nav>li>a::after {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    
+                                                    @media (min-width: 1200px) {
+                                                        #custom-footer::after {
+                                                            visibility: visible;
+                                                            position: absolute;
+                                                            background-image: url('/logos/navbar/forest-footer.svg');
+                                                            background-repeat: no-repeat;
+                                                            content: "";
+                                                            transform: scale(0.6);
+                                                            height: 182px;
+                                                            width: 210px;
+                                                            top: -150px;
+                                                            z-index: 20;
+                                                            left: -45px;
+                                                        }
+                                                        .header-text {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            padding-top: 15px;
+                                                            font-size: 24px;
+                                                            color: #000000;
+                                                            min-height: 50px;
+                                                        }
+                                                        .footer-eu-image {
+                                                            width: 583px;
+                                                            height: 50px;
+                                                        }
+                                                        #navbarFixed form.navbar-form-link a::after {
+                                                            content: '|';
+                                                            position: relative;
+                                                            top: 1px;
+                                                            left: 15px;
+                                                        }
+                                                        .nav>li>a::after {
+                                                            content: '|';
+                                                            position: relative;
+                                                            top: 1px;
+                                                            left: 15px;
+                                                        }
+                                                        .row {
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    /* OLD CSS CLASSES */
+                                                    
+                                                    .heavy-rule {
+                                                        border: 1px solid #DDD;
+                                                    }
+                                                    
+                                                    .spacer-rule {
+                                                        border: 0;
+                                                        margin-top: 0;
+                                                    }
+                                                    
+                                                    .activity-rule {
+                                                        width: 85%;
+                                                        margin-left: 30px;
+                                                    }
+                                                    
+                                                    div.search-widget {
+                                                        padding-bottom: 2em;
+                                                    }
+                                                    
+                                                    div.hmpg-recent-col p.placeholder {
+                                                        display: inline-block;
+                                                    }
+                                                    
+                                                    div.hmpg-recent-col div.hmpg-recent-block {
+                                                        border-bottom: 1px solid #DDD;
+                                                        margin-bottom: 12px;
+                                                    }
+                                                    /* NOTE: REMOVED THUMBNAILS
     div.hmpg-recent-col div.col-xs-2.hmpg-recent-thumb {width: 48px !important;height:48px;padding: 0 !important;}
     div.hmpg-recent-col div.hmpg-recent-thumb img {max-height:48px;max-width:48px;}
     div.hmpg-recent-col div.hmpg-recent-thumb span {font-size:38px;}
     */
-        
-        div.activity-label {
-            line-height: 19px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
+                                                    
+                                                    div.activity-label {
+                                                        line-height: 19px;
+                                                        margin-top: 10px;
+                                                        margin-bottom: 10px;
+                                                    }
