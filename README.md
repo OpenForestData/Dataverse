@@ -4,5 +4,5 @@
 2. Clone this repository.
 3. Copy catalog branding into /var/www of your Dataverse.  
 
-Oficial link to Dataverse Documentation  
+Link to Official Dataverse Documentation  
 http://guides.dataverse.org/en/latest/installation/config.html#branding-your-installation
