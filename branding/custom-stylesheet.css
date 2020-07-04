@@ -424,7 +424,11 @@ a:active,
 }
 
 .btn span.glyphicon::before {
-  color: black;
+  color: white;
+}
+
+.btn span.glypicon:hover:before {
+  color: #019544;
 }
 
 a[id$="advsearchlink"] {
@@ -522,8 +526,8 @@ table[id$="resultsTable"] td > div.dataverseResult {
 
 .col-manage-action .button-block button:hover {
   border-radius: 50px;
-  background-color: #019544 !important;
-  color: white;
+  background-color: white !important;
+  color: #019544;
   width: 14em;
 }
 
@@ -623,6 +627,10 @@ div.panel-heading.text-info[data-toggle="collapse"] {
   color: white;
   background-color: #019544;
   border-color: #019544;
+}
+
+#breadCrumbPanel {
+  margin-top: 150px;
 }
 /* RESPONSIVE VIEW CONFIG */
 /* @media (max-device-width: 480px) and (orientation: landscape) {} */
@@ -796,6 +804,10 @@ div.panel-heading.text-info[data-toggle="collapse"] {
   #metrics-block {
     border: 0;
   }
+}
+
+parsererror {
+  padding: 100px 1em 0 1em;
 }
 /* OLD CSS CLASSES */
 
