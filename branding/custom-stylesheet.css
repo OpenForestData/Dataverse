@@ -315,7 +315,7 @@ div.hmpg-action-block {
 /* Dataverse ROOT CSS  */
 
 #dataverseDesc {
-  display: none;
+  width: 80%;
 }
 
 #content {
@@ -424,7 +424,7 @@ a:active,
 }
 
 .btn span.glyphicon::before {
-  color: white;
+  color: black;
 }
 
 .btn span.glypicon:hover:before {
@@ -527,9 +527,13 @@ table[id$="resultsTable"] td > div.dataverseResult {
 .col-manage-action .button-block button:hover {
   border-radius: 50px;
   background-color: white !important;
-  color: #019544;
+  color: #019544 !important;
   width: 14em;
 }
+
+/* .col-manage-action .button-block button:hover .btn span.glyphicon::before {
+  color: #019544 !important;
+} */
 
 .ui-state-active .ui-icon {
   background-image: url("/logos/datasets/checkbox-active.svg") !important;
@@ -809,6 +813,19 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 parsererror {
   padding: 100px 1em 0 1em;
 }
+
+/* FIXING MINOR ISSUES */
+
+table.ui-selectoneradio span.ui-icon-bullet,
+.ui-radiobutton-box span.ui-icon-bullet {
+  background-position: center !important;
+  border-radius: 0px;
+}
+
+.ui-radiobutton .ui-radiobutton-box {
+  border-radius: 0px;
+}
+
 /* OLD CSS CLASSES */
 
 .heavy-rule {
