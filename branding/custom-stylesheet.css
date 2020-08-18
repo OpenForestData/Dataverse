@@ -157,6 +157,8 @@ div.hmpg-action-block {
     break-inside: avoid;
     break-inside: avoid-column;
     padding-top: 15px;
+    grid-gap: 20px;
+    width: 100%;
   }
   #journals {
     -webkit-column-count: 1;
@@ -599,24 +601,10 @@ div.panel-heading.text-info[data-toggle="collapse"] {
   padding-bottom: 15px;
 }
 
-.icon-dataset:before {
-  content: "";
-  background-image: url(/logos/datasets/dataset.svg);
-  width: 16px;
-  height: 20px;
-  transform: scaleY(0.9);
-}
-
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   color: white;
   background-color: #019544;
-}
-
-[data-icon]:before,
-.icon-dataset:before {
-  position: relative;
-  top: 2px;
 }
 
 .btn-default.active.focus,
@@ -636,6 +624,48 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 #breadCrumbPanel {
   margin-top: 150px;
 }
+
+.card-title-icon-block {
+  padding: 10px 0;
+}
+
+.card-title-icon-block > a {
+  color: #019544 !important;
+}
+
+.glyphicon-plus::before {
+  color: white !important;
+}
+
+.glyphicon-plus::before:hover {
+  color: #019544 !important;
+}
+
+.card-preview-icon-block > a {
+  color: #019544 !important;
+}
+
+:focus {
+  outline: none;
+}
+
+.ui-radiobutton-icon {
+  border: none;
+  background-image: url("/javax.faces.resource/images/ui-icons_333333_256x240.png.xhtml?ln=primefaces-bootstrap");
+}
+
+table.ui-panelgrid.facetsMoreLess td:last-child > a {
+  color: #019544 !important;
+}
+
+.datasetResult > a {
+  color: #019544 !important;
+}
+
+.chkbox-label-margin {
+  margin-top: 5px;
+}
+
 /* RESPONSIVE VIEW CONFIG */
 /* @media (max-device-width: 480px) and (orientation: landscape) {} */
 
@@ -811,7 +841,7 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 }
 
 parsererror {
-  padding: 100px 1em 0 1em;
+  padding: 100px 1em 0 1em !important;
 }
 
 /* FIXING MINOR ISSUES */
@@ -865,3 +895,4 @@ div.activity-label {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
