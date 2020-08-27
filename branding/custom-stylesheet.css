@@ -643,7 +643,7 @@ div.panel-heading.text-info[data-toggle="collapse"] {
   color: white !important;
 }
 
-.button:hover > .glyphicon-plus::before {
+button:hover > .glyphicon-plus::before {
   color: #019544 !important;
 }
 
@@ -731,11 +731,11 @@ div[id$='facetCategoryList'] div.ui-datalist, div[id$='facetCategoryList'] div.u
   display: none;
 }
 
-.pagination > li:nth-child(2) {
+.pagination > li:nth-child(2) > a {
   content: '<';
 }
 
-.pagination > li:nth-last-child(n-1) {
+.pagination > li:nth-last-child(n-1) > a {
   content: '>';
 }
 
@@ -747,12 +747,7 @@ div[id$='facetCategoryList'] div.ui-datalist, div[id$='facetCategoryList'] div.u
   color: #019544 !important;
 }
 
-.navbar-right >:not(:last-child)::after {
-  content: '|';
-  padding: 0 3px;
-}
-
-.navbar-fixed .container {
+#navbarFixed .container {
   padding: 5px 0;
 }
 
