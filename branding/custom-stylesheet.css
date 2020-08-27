@@ -24,6 +24,9 @@
 .header-container {
   min-height: 50px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-text {
@@ -276,8 +279,7 @@ div.hmpg-action-block {
 }
 
 .logo-padding {
-  padding-left: 50px;
-  padding: 0 30px;
+  padding: 0 75px;
 }
 
 .footer-links {
@@ -338,6 +340,7 @@ div.hmpg-action-block {
   float: left;
   font-size: 14px;
   padding-left: 25px;
+  font-weight: 700;
 }
 
 .metrics-downloads::before {
@@ -373,11 +376,12 @@ div.hmpg-action-block {
 }
 
 [id$="resultsTable"] .resultDatasetCitationBlock {
-  margin: 0px;
-  font-weight: bold;
+  margin: 0px 10px;
+  font-weight: normal;
   background-color: #f6f4f2;
   border: 0px;
-  margin: 1px 0 1px 0;
+  padding: 1px 0 1px 10px;
+  margin: 10px 0;
 }
 
 div.panelSearchForm input.search-input {
@@ -460,6 +464,7 @@ div.results-sort-pagination
 
 table[id$="resultsTable"] td > div.datasetResult {
   border-color: #f6f4f2;
+  padding-bottom: 10px;
 }
 
 [id$="resultsTable"] div[class*="Result"] > div.card-title-icon-block,
@@ -478,7 +483,7 @@ table[id$="resultsTable"] td > div.datasetResult {
   z-index: 3;
   color: #019544;
   cursor: default;
-  background-color: #f6f4f2;
+  background-color: transparent;
   border-color: #337ab7;
 }
 
@@ -604,7 +609,7 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
   color: white;
-  background-color: #019544;
+  background-color: #019544 !important;
 }
 
 .btn-default.active.focus,
@@ -631,15 +636,17 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 
 .card-title-icon-block > a {
   color: #019544 !important;
+  font-weight: 700;
 }
 
 .glyphicon-plus::before {
   color: white !important;
 }
 
-.glyphicon-plus::before:hover {
+.button:hover > .glyphicon-plus::before {
   color: #019544 !important;
 }
+
 
 .card-preview-icon-block > a {
   color: #019544 !important;
@@ -656,6 +663,7 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 
 table.ui-panelgrid.facetsMoreLess td:last-child > a {
   color: #019544 !important;
+  font-weight: 700;
 }
 
 .datasetResult > a {
@@ -665,6 +673,89 @@ table.ui-panelgrid.facetsMoreLess td:last-child > a {
 .chkbox-label-margin {
   margin-top: 5px;
 }
+
+#addDataForm > div > button:hover > span::before {
+  color: #019544 !important;
+}
+
+#resultsFacetsTopBlock > a {
+  font-weight: normal;
+}
+
+.pull-right>.dropdown-menu {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-image: none;
+  background-color: #019544 !important;
+  color: white;
+}
+
+.btn-group .dropdown-toggle:active > span::before {
+  color: white !important;
+}
+
+tr.ui-state-highlight a:not(.btn), .ui-widget-content tr.ui-state-highlight a:not(.btn), .ui-widget-header tr.ui-state-highlight a:not(.btn) {
+  color: #019544 !important;
+}
+
+.btn-link {
+  color: #019544 !important;
+}
+
+.glyphicon-question-sign:before {
+  color: #019544 !important;
+}
+
+
+div[id$='facetCategoryList'] ul, div[id$='facetCategoryList'] li, div[id$='facetCategoryList'] div {
+  padding-bottom: 10px;
+}
+
+div[id$='facetCategoryList'] div.ui-datalist, div[id$='facetCategoryList'] div.ui-datalist div.ui-datalist-content {
+  padding-top: 5px !important;
+}
+
+.bold-main-page {
+  font-weight: 700;
+  color: black;
+}
+
+.footer-link {
+  color: #019544 !important;
+}
+
+.pagination > li:first-child {
+  display: none;
+}
+
+.pagination > li:nth-child(2) {
+  content: '<';
+}
+
+.pagination > li:nth-last-child(n-1) {
+  content: '>';
+}
+
+.pagination > li:last-child {
+  display: none;
+}
+
+.facetsMoreless > tbody > tr > td > a {
+  color: #019544 !important;
+}
+
+.navbar-right >:not(:last-child)::after {
+  content: '|';
+  padding: 0 3px;
+}
+
+.navbar-fixed .container {
+  padding: 5px 0;
+}
+
 
 /* RESPONSIVE VIEW CONFIG */
 /* @media (max-device-width: 480px) and (orientation: landscape) {} */
