@@ -442,9 +442,11 @@ a[id$="advsearchlink"] {
 }
 
 #addDataForm .btn-group .btn {
+  margin-top: 25px;
   border-radius: 50px;
   background-color: #019544;
   color: white;
+  border: none;
 }
 
 .results-sort-pagination .btn-group .btn {
@@ -610,6 +612,7 @@ div.panel-heading.text-info[data-toggle="collapse"] {
 .btn-group.open .dropdown-toggle {
   color: white;
   background-color: #019544 !important;
+  border: none;
 }
 
 .btn-default.active.focus,
@@ -751,6 +754,17 @@ div[id$='facetCategoryList'] div.ui-datalist, div[id$='facetCategoryList'] div.u
   padding: 5px 0;
 }
 
+.btn-default {
+  border-radius: 50px;
+}
+
+.btn-access > span::before {
+  color: black;
+}
+
+.btn:active > span::before {
+  color: #019544;
+}
 
 /* RESPONSIVE VIEW CONFIG */
 /* @media (max-device-width: 480px) and (orientation: landscape) {} */
