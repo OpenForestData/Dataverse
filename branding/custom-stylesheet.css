@@ -996,3 +996,60 @@ div.activity-label {
   margin-bottom: 10px;
 }
 
+@media (max-width: 1200px) {
+  .row {
+    display: block;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header-puszcza {
+    display: inline-block;
+  }
+  .header-container {
+    display: block;
+    text-align: center;
+  }
+
+  .header-text {
+    padding-top: 0;
+    min-height: unset;
+  }
+
+  #content {
+    padding-top: 125px
+  }
+}
+
+@media (max-width: 990px) {
+  .metrics-downloads {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  div.panelSearchForm {
+    margin-top: 80px;
+    display: block;
+  }
+
+  div.panelSearchForm > div {
+    width: 100%;
+    float: unset;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: unset !important;
+    margin-top: 0;
+  }
+
+  #resultsCountPaginatorBlock {
+    display: block;
+  }
+
+  #resultsCountPaginatorBlock > div {
+    width: 100%;
+    float: unset;
+  }
+}
