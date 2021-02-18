@@ -1053,3 +1053,70 @@ div.activity-label {
     float: unset;
   }
 }
+
+
+
+@media (max-width: 992px) {
+  .navbar-nav>li>a,
+  #navbarFixed form.navbar-form-link a.ui-commandlink, #navbarFixed ul.navbar-nav li.dropdown span.dropdown-toggle{
+    padding: 10px 40px;
+  }
+
+  .search-icon {
+    left: -29%;
+  }
+}
+
+@media (max-width: 500px) {
+  #breadCrumbPanel {
+    margin-top: 187px;
+  }
+}
+
+@media (max-width: 767px) {
+  #datasetVersionBlock {
+    display: block;
+  }
+
+  #navbarFixed .navbar-header {
+    margin: 0;
+    padding: 0 10px;
+  }
+  #datasetVersionBlock .col-xs-12 .row:not(#dataset-summary-metadata) > div{
+    width: 100%;
+    float: none;
+  }
+
+  #datasetVersionBlock .col-xs-12 .row:not(#dataset-summary-metadata){
+    display: block;
+  }
+
+  #metrics-block {
+    display: block !important;
+  }
+
+  .row-search {
+    padding: 0 20px 45px 20px;
+  }
+
+  .input-search {
+    padding-top: 6px !important;
+    text-indent: 0;
+  }
+
+  .owners .row {
+    display: block;
+  }
+
+  .owners .row > div {
+    padding: 15px;
+  }
+
+  .row.hmpg-action-block {
+    display: block;
+  }
+
+  #browseBySubject .row {
+    display: block;
+  }
+}
