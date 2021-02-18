@@ -1031,6 +1031,8 @@ div.activity-label {
   div.panelSearchForm {
     margin-top: 80px;
     display: block;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   div.panelSearchForm > div {
@@ -1053,8 +1055,6 @@ div.activity-label {
     float: unset;
   }
 }
-
-
 
 @media (max-width: 992px) {
   .navbar-nav>li>a,
